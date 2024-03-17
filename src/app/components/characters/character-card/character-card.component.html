@@ -1,0 +1,21 @@
+<div class="card mb-4 box-shadow">
+    <img [src]="character.image" class="card-img-top" [alt]="character.name">
+    <div class="card-body">
+      <h5 class="card-title mb-3">{{ character.name }}</h5>
+      <div class="card-text mb-1">
+        <b>Status</b>: <span>{{ character.status }}</span>
+      </div>
+      <div class="card-text mb-1">
+        <b>Species</b>: <span>{{ character.species }}</span>
+      </div>
+      <div class="card-text mb-1">
+        <b>Gender</b>: <span>{{ character.gender }}</span>
+      </div>
+      <div class="pt-3">
+        <a class="btn btn-primary d-flex align-items-center justify-content-center gap-2" [routerLink]="['/details', character.id]">
+          <i class="fa-solid fa-arrow-right"></i>
+          <span>Details</span>
+        </a>
+      </div>
+    </div>
+  </div>

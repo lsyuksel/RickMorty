@@ -1,0 +1,16 @@
+<nav class="left-menu">
+    <div class="left-menu-title" [routerLink]="['/']">
+        <h2>Rick and Morty API</h2>
+    </div>
+    <ul>
+        <li *ngFor="let menu of menus">
+            <a [routerLink]="menu.path" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                <i [ngClass]="menu.icon"></i>
+                <span>{{ menu.title }}</span>
+            </a>
+        </li>
+    </ul>
+    <div class="left-menu-copyright">
+        Rick and Morty © Jengal Software
+    </div>
+</nav>

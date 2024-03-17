@@ -1,0 +1,61 @@
+:root {
+    font-size: 16px;
+}
+
+body {
+    min-height: 100%;
+}
+
+nav {
+    padding: 0 24px 0 0;
+    margin: 24px 0;
+    border-right: 1px solid var(--bs-border-color);
+}
+main {
+    margin: 24px 0;
+    min-height: calc(100% - 48px);
+}
+
+.custom-paginate {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px 0;
+    > * {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border: 1px solid var(--bs-blue);
+        border-radius: 4px;
+        background: var(--bs-blue);
+        cursor: pointer;
+        color: #fff;
+        font-size: 80%;
+    }
+    > span {
+        color: var(--bs-dark);
+        border-color: var(--bs-border-color);
+        background: #fff;
+        font-size: 90%;
+        &.active {
+            background: var(--bs-blue);
+            color: #fff;
+            border-color: var(--bs-blue);
+        }
+    }
+    @media (max-width: 767px) {
+        gap: 5px;
+        justify-content: center;
+    }
+}
+
+.card-title {
+    font-size: 105%;
+}
+
+img {
+    max-width: 100%;
+}

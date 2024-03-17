@@ -1,0 +1,17 @@
+<div class="card mb-4 box-shadow">
+    <div class="card-body">
+        <h5 class="card-title mb-3">{{ episode.name }}</h5>
+        <div class="card-text mb-1">
+            <b>Date</b>: <span>{{ episode.air_date }}</span>
+        </div>
+        <div class="card-text mb-1">
+            <b>Episode</b>: <span>{{ episode.episode }}</span>
+        </div>
+        <div class="pt-3">
+            <a class="btn btn-primary d-flex align-items-center justify-content-center gap-2" [routerLink]="['/episode-details', episode.id]">
+                <i class="fa-solid fa-arrow-right"></i>
+                <span>Details</span>
+            </a>
+        </div>
+    </div>
+</div>

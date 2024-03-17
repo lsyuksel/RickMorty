@@ -1,0 +1,27 @@
+.detail-page {
+    .character-top-content {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        .character-content {
+            flex: 1 0 0;
+            h5 {
+                line-height: 150%;
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        .character-top-content {
+            flex-direction: column;
+            align-items: flex-start;
+            border-bottom: 1px solid #ddd;
+            padding: 0 0 20px;
+            .character-content {
+                h5 {
+                    font-size: 100%;
+                }
+            }
+        }
+    }
+}

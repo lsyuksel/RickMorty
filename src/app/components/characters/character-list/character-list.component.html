@@ -1,0 +1,24 @@
+<app-filter-characters (filterChange)="applyFilter($event)"></app-filter-characters>
+
+<div class="charecters-list-container">
+  <div class="row result" *ngIf="characters.length != 0">
+    <div class="col-md-6 col-xl-4" *ngFor="let character of characters">
+      <app-character-card [character]="character"></app-character-card>
+    </div>
+  </div>
+  <div class="card" *ngIf="characters.length == 0">
+    <div class="card-body">
+      No results found
+    </div>
+  </div>
+</div>
+
+<div *ngIf="pageInfo && pageInfo.pages > 1 && characters.length != 0" class="custom-paginate">
+  <button *ngIf="pageInfo.prev" (click)="getCharacters(pageInfo.prev)">
+    <i class="fa-solid fa-arrow-left"></i>
+  </button>
+  <span *ngFor="let page of getPageNumbers()" [ngClass]="{'active': page == activePage}" (click)="getCharacters(getPageUrl(page))">{{ page }}</span>
+  <button *ngIf="pageInfo.next" (click)="getCharacters(pageInfo.next)">
+    <i class="fa-solid fa-arrow-right"></i>
+  </button>
+</div>

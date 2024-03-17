@@ -1,0 +1,37 @@
+<div class="characters-filter">
+    <div class="filter-title">Filter Characters</div>
+    <div class="filter-sorting">
+        <div class="filter-input">
+            <input class="form-control" type="text" [(ngModel)]="filterArray.filterName" placeholder="Name">
+        </div>
+        <div class="filter-input">
+            <input class="form-control" type="text" [(ngModel)]="filterArray.filterType" placeholder="Type">
+        </div>
+        <div class="filter-select">
+            <select class="form-control" [(ngModel)]="filterArray.filterStatus">
+                <option value="">Status</option>
+                <option value="alive">Alive</option>
+                <option value="dead">Dead</option>
+                <option value="unknown">Unknown</option>
+            </select>
+        </div>
+        <div class="filter-select">
+            <select class="form-control" [(ngModel)]="filterArray.filterGender">
+              <option value="">Gender</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="genderless">Genderless</option>
+              <option value="unknown">Unknown</option>
+            </select>
+        </div>
+        <div class="filter-button">
+            <button class="btn btn-primary d-flex align-items-center gap-2" (click)="emitFilterChange()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Search</span>
+            </button>
+            <button class="btn btn-danger" (click)="clearFilter()">
+                <i class="fa-solid fa-trash-can"></i>
+            </button>
+        </div>
+    </div>
+</div>

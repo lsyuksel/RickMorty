@@ -1,0 +1,27 @@
+<main class="detail-page">
+    <div class="character-episode" *ngIf="episodes">
+        <div class="episdoe-title mb-3">
+            <h3>{{ episodes.name }}</h3>
+        </div>
+        <div class="card-body">
+            <div class="card-text mb-1">
+                <b>Date</b>: <span>{{ episodes.air_date }}</span>
+            </div>
+            <div class="card-text mb-1">
+                <b>Episode</b>: <span>{{ episodes.episode }}</span>
+            </div>
+        </div>
+    </div>
+    <div class="charecters-list-container pt-3">
+        <div class="row result" *ngIf="characters.length != 0">
+            <div class="col-md-6 col-xl-4" *ngFor="let character of characters">
+                <app-character-card [character]="character"></app-character-card>
+            </div>
+        </div>
+        <div class="card" *ngIf="characters.length == 0">
+            <div class="card-body">
+                No results found
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,29 @@
+<main class="detail-page">
+    <div class="character-top-content" *ngIf="character">
+        <div class="card">
+            <div class="card-body">
+                <img [src]="character.image || ''" class="" [alt]="character.name || ''">
+            </div>
+        </div>
+        <div class="character-content">
+            <h3>{{ character.name || '' }}</h3>
+            <h5>Date : {{ formatCreatedDate(character.created || '') }}</h5>
+            <h5>Gender : {{ character.gender || '' }}</h5>
+            <h5>Location : {{ character.location.name || '' }}</h5>
+            <h5>Species : {{ character.species || '' }}</h5>
+            <h5>Status : {{ character.status || '' }}</h5>
+            <h5>Type : {{ character.type || '-' }}</h5>
+            <h5>Origin : {{ character.origin.name || '-' }}</h5>
+        </div>
+    </div>
+    <div class="character-episode pt-4" *ngIf="episodes">
+        <div class="episdoe-title mb-4">
+            <h3>Episodes</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-xl-4" *ngFor="let episode of episodes">
+                <app-episode-card [episode]="episode"></app-episode-card>
+            </div>
+        </div>
+    </div>
+</main>
