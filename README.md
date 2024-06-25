@@ -14,4 +14,4 @@ ng serve
 
 ## Live
 
-https://hasanyuksel.netlify.app/
+https://rick-morty-one-rho.vercel.app/
